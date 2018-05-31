@@ -29,6 +29,10 @@
                 {
                     "type": "patch",
                     "path": "appdata-releases.patch"
+                },
+                {
+                    "type": "patch",
+                    "path": "appdata-launchable.patch"
                 }
             ],
             "cleanup": [
