@@ -33,6 +33,10 @@
                 {
                     "type": "patch",
                     "path": "appdata-launchable.patch"
+                },
+                {
+                    "type": "patch",
+                    "path": "appdata-screenshot.patch"
                 }
             ],
             "cleanup": [
