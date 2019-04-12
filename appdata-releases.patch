@@ -11,11 +11,12 @@ diff --git a/etc/emacs.appdata.xml b/etc/emacs.appdata.xml
 index c39668c635..ac63add275 100644
 --- a/etc/emacs.appdata.xml
 +++ b/etc/emacs.appdata.xml
-@@ -32,4 +32,7 @@
+@@ -32,4 +32,8 @@
   <url type="homepage">https://www.gnu.org/software/emacs</url>
   <update_contact>emacs-devel_AT_gnu.org</update_contact>
   <project_group>GNU</project_group>
 + <releases>
++   <release date="2019-04-12" version="26.2"/>
 +   <release date="2018-05-28" version="26.1"/>
 + </releases>
  </component>
