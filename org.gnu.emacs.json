@@ -23,8 +23,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "http://ftp.gnu.org/gnu/emacs/emacs-26.2.tar.xz",
-                    "sha256": "151ce69dbe5b809d4492ffae4a4b153b2778459de6deb26f35691e1281a9c58e"
+                    "url": "http://ftp.gnu.org/gnu/emacs/emacs-26.3.tar.xz",
+                    "sha256": "4d90e6751ad8967822c6e092db07466b9d383ef1653feb2f95c93e7de66d3485"
                 },
                 {
                     "type": "patch",
@@ -33,6 +33,14 @@
                 {
                     "type": "patch",
                     "path": "appdata-launchable.patch"
+                },
+                {
+                    "type": "patch",
+                    "path": "appdata-content-rating.patch"
+                },
+                {
+                    "type": "patch",
+                    "path": "appdata-screenshot-size.patch"
                 }
             ],
             "cleanup": [

@@ -1,25 +1,26 @@
-From b8e845d75f264faf33e595426ddba07b73496ccb Mon Sep 17 00:00:00 2001
+From 96799084d91d7c62b44717f9a66444f39d7e84cd Mon Sep 17 00:00:00 2001
 From: =?UTF-8?q?Joonas=20Saraj=C3=A4rvi?= <muep@iki.fi>
 Date: Tue, 17 Apr 2018 21:58:19 +0300
 Subject: [PATCH] Add releases element to appdata.xml
 
 ---
- etc/emacs.appdata.xml | 3 +++
- 1 file changed, 3 insertions(+)
+ etc/emacs.appdata.xml | 5 +++++
+ 1 file changed, 5 insertions(+)
 
 diff --git a/etc/emacs.appdata.xml b/etc/emacs.appdata.xml
-index c39668c635..ac63add275 100644
+index 6898de3a0c..abd545f85d 100644
 --- a/etc/emacs.appdata.xml
 +++ b/etc/emacs.appdata.xml
-@@ -32,4 +32,8 @@
+@@ -32,4 +32,9 @@
   <url type="homepage">https://www.gnu.org/software/emacs</url>
   <update_contact>emacs-devel_AT_gnu.org</update_contact>
   <project_group>GNU</project_group>
 + <releases>
++   <release date="2019-08-28" version="26.3"/>
 +   <release date="2019-04-12" version="26.2"/>
 +   <release date="2018-05-28" version="26.1"/>
 + </releases>
  </component>
 -- 
-2.14.3
+2.21.0
 

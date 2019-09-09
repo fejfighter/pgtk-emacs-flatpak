@@ -1,0 +1,31 @@
+From 8112654a4731ded26b05ec5a716fef893674d358 Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?Joonas=20Saraj=C3=A4rvi?= <muep@iki.fi>
+Date: Thu, 21 Nov 2019 23:19:09 +0200
+Subject: [PATCH] Add content_rating to appdata.xml
+
+---
+ etc/emacs.appdata.xml | 10 ++++++++++
+ 1 file changed, 10 insertions(+)
+
+diff --git a/etc/emacs.appdata.xml b/etc/emacs.appdata.xml
+index abd545f85d..0794ce9ab6 100644
+--- a/etc/emacs.appdata.xml
++++ b/etc/emacs.appdata.xml
+@@ -37,4 +37,14 @@
+    <release date="2019-04-12" version="26.2"/>
+    <release date="2018-05-28" version="26.1"/>
+  </releases>
++ <content_rating type="oars-1.0">
++   <content_attribute id="drugs-alcohol">mild</content_attribute>
++   <content_attribute id="drugs-narcotics">mild</content_attribute>
++   <content_attribute id="drugs-tobacco">mild</content_attribute>
++   <content_attribute id="sex-themes">mild</content_attribute>
++   <content_attribute id="language-profanity">mild</content_attribute>
++   <content_attribute id="language-humor">moderate</content_attribute>
++   <content_attribute id="social-chat">intense</content_attribute>
++   <content_attribute id="social-contacts">intense</content_attribute>
++ </content_rating>
+ </component>
+-- 
+2.21.0
+
