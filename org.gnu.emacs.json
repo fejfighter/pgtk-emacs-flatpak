@@ -1,8 +1,8 @@
 {
     "app-id": "org.gnu.emacs",
-    "runtime": "org.freedesktop.Sdk",
-    "runtime-version": "19.08",
-    "sdk": "org.freedesktop.Sdk",
+    "runtime" : "org.gnome.Sdk",
+    "runtime-version" : "3.36",
+    "sdk" : "org.gnome.Sdk",
     "command": "emacs",
     "rename-icon": "emacs",
     "rename-appdata-file": "emacs.appdata.xml",
@@ -11,7 +11,8 @@
         "--share=network",
         "--share=ipc",
         "--socket=pulseaudio",
-        "--socket=x11",
+	"--socket=fallback-x11",
+        "--socket=wayland",
         "--filesystem=host",
         "--filesystem=/tmp",
         "--filesystem=/var/tmp"
@@ -21,13 +22,12 @@
             "name": "emacs",
             "buildsystem": "autotools",
             "config-opts": [
-                "--with-gnutls"
+                "--with-gnutls", "--without-x", "--with-cairo", "--with-harfbuzz", "--with-modules"
             ],
             "sources": [
                 {
-                    "type": "archive",
-                    "url": "https://ftp.gnu.org/gnu/emacs/emacs-26.3.tar.xz",
-                    "sha256": "4d90e6751ad8967822c6e092db07466b9d383ef1653feb2f95c93e7de66d3485"
+		    "type": "git",
+		    "url": "https://github.com/fejfighter/emacs.git"
                 },
                 {
                     "type": "patch",
@@ -47,9 +47,11 @@
                 }
             ],
             "cleanup": [
+		"/share/icons/hicolor/scalable/apps/org.gnu.emacs.ico",
                 "/share/icons/hicolor/scalable/mimetypes/emacs-document.svg",
                 "/share/icons/hicolor/scalable/mimetypes/emacs-document23.svg"
             ]
         }
     ]
 }
+ 
