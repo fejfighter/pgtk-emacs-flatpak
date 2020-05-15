@@ -1,5 +1,5 @@
 {
-    "app-id": "org.gnu.emacs",
+    "app-id": "org.rh.emacs",
     "runtime" : "org.gnome.Sdk",
     "runtime-version" : "3.36",
     "sdk" : "org.gnome.Sdk",
@@ -13,6 +13,7 @@
         "--socket=pulseaudio",
 	"--socket=fallback-x11",
         "--socket=wayland",
+	"--talk-name=org.freedesktop.Notifications",
         "--filesystem=host",
         "--filesystem=/tmp",
         "--filesystem=/var/tmp"
@@ -27,7 +28,7 @@
             "sources": [
                 {
 		    "type": "git",
-		    "url": "https://github.com/fejfighter/emacs.git"
+                    "url": "https://github.com/fejfighter/emacs.git"
                 },
                 {
                     "type": "patch",
@@ -47,7 +48,7 @@
                 }
             ],
             "cleanup": [
-		"/share/icons/hicolor/scalable/apps/org.gnu.emacs.ico",
+		"/share/icons/hicolor/scalable/apps/emacs.ico",
                 "/share/icons/hicolor/scalable/mimetypes/emacs-document.svg",
                 "/share/icons/hicolor/scalable/mimetypes/emacs-document23.svg"
             ]
