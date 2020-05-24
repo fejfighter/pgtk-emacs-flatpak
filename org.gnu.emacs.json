@@ -20,6 +20,9 @@
         {
             "name": "emacs",
             "buildsystem": "autotools",
+            "config-opts": [
+                "--with-gnutls"
+            ],
             "sources": [
                 {
                     "type": "archive",
