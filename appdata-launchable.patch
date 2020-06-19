@@ -16,7 +16,7 @@ index ac63add275..e582eadbb0 100644
   </screenshot>
   </screenshots>
 - <launchable type="desktop-id">emacs</launchable>
-+ <launchable type="desktop-id">org.gnu.emacs.desktop</launchable>
++ <launchable type="desktop-id">org.rh.emacs.desktop</launchable>
   <url type="homepage">https://www.gnu.org/software/emacs</url>
   <update_contact>emacs-devel_AT_gnu.org</update_contact>
   <project_group>GNU</project_group>

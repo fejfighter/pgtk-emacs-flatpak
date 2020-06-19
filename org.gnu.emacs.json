@@ -1,5 +1,5 @@
 {
-    "app-id": "org.rh.emacs",
+    "app-id": "org.rh.emacs-native",
     "runtime" : "org.gnome.Sdk",
     "runtime-version" : "3.36",
     "sdk" : "org.gnome.Sdk",
@@ -19,16 +19,75 @@
         "--filesystem=/var/tmp"
     ],
     "modules": [
+	{
+            "name": "jansson",
+	    "buildsystem": "autotools",
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "http://www.digip.org/jansson/releases/jansson-2.12.tar.gz",
+                    "sha512": "e40bdafdfa1fa663f71e00c06d7bfc98cff4ed3581a147894e5272e50fa5f9b9a7af6aaca41ff423a2ddd2554a192b36efcc32f6a3c98c727e9f819b955357cb"
+                }
+            ]
+        },
+	{
+            "name": "mpfr",
+	    "buildsystem": "autotools",
+	    "config-opts": [],
+            "sources": [
+                {
+                    "type": "archive",
+		    "url": "https://www.mpfr.org/mpfr-current/mpfr-4.0.2.tar.xz",
+                    "sha512": "d583555d08863bf36c89b289ae26bae353d9a31f08ee3894520992d2c26e5683c4c9c193d7ad139632f71c0a476d85ea76182702a98bf08dde7b6f65a54f8b88"
+                }
+            ]
+        },
+	{
+            "name": "mpc",
+	    "buildsystem": "autotools",
+	    "config-opts": [],
+            "sources": [
+                {
+		    "type": "archive",
+		    "url": "https://ftp.gnu.org/gnu/mpc/mpc-1.1.0.tar.gz",
+		    "sha512": "72d657958b07c7812dc9c7cbae093118ce0e454c68a585bfb0e2fa559f1bf7c5f49b93906f580ab3f1073e5b595d23c6494d4d76b765d16dde857a18dd239628"
+                }
+            ]
+        },
+	{
+            "name": "gmp",
+	    "buildsystem": "autotools",
+	    "config-opts": [],	
+            "sources": [
+                {
+		    "type": "archive",
+		    "url": "https://gmplib.org/download/gmp/gmp-6.2.0.tar.lz",
+		    "sha512": "9975e8766e62a1d48c0b6d7bbdd2fccb5b22243819102ca6c8d91f0edd2d3a1cef21c526d647c2159bb29dd2a7dcbd0d621391b2e4b48662cf63a8e6749561cd"
+                }
+            ]
+        },
+	{
+            "name": "libgccjit",
+	    "buildsystem": "autotools",
+	    "config-opts": ["--enable-host-shared", "--disable-multilib", "--enable-languages=jit", "--disable-bootstrap", "--enable-checking=release"],
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "git://gcc.gnu.org/git/gcc.git"
+                }
+            ]
+        },
         {
             "name": "emacs",
             "buildsystem": "autotools",
             "config-opts": [
-                "--with-gnutls", "--without-x", "--with-cairo", "--with-harfbuzz", "--with-modules"
+                "--with-gnutls", "--with-nativecomp", "--with-modules", "--with-jansson", "--without-x"
             ],
             "sources": [
                 {
 		    "type": "git",
-                    "url": "https://github.com/fejfighter/emacs.git"
+                    "url": "https://github.com/fejfighter/emacs.git",
+		    "branch": "pgtk-native"
                 },
                 {
                     "type": "patch",
