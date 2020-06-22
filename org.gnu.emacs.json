@@ -104,6 +104,10 @@
                 {
                     "type": "patch",
                     "path": "appdata-screenshot-size.patch"
+                },
+	        {
+                    "type": "patch",
+                    "path": "desktop-rename.patch"
                 }
             ],
             "cleanup": [
