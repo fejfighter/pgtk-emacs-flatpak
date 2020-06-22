@@ -87,7 +87,7 @@
                 {
 		    "type": "git",
                     "url": "https://github.com/fejfighter/emacs.git",
-		    "branch": "pgtk-native"
+		    "branch": "pgtk-nativecomp"
                 },
                 {
                     "type": "patch",
