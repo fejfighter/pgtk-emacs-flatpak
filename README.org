@@ -1,10 +1,12 @@
 
-* Emacs Flatpak with Pure-GTK interface and native-comp (lisp on libGCCjit)
+* My Emacs Flatpak 
+** with Pure-GTK interface and native-comp (lisp on libGCCjit)
 
 This a pre-configured flatpak manifest to build an emacs branch with libjanson, libgccjit and dependencies.
 This uses the latest releases of of all components, except for gcc, which has jit fixes in-tree and emacs, which has the experimental code bringing everything together.
 
-This simply glues everything together to in a trackable package rather than installing to `/usr/local/` 
+This simply glues everything together to in a trackable package rather than installing to `/usr/local/`
+
 If you'd prefer traditional `./configure && make && make install` checkout the 'pgtk-nativecomp' branch here: https://github.com/fejfighter/emacs
 
 ** Building
