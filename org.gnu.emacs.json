@@ -85,10 +85,10 @@
 		"--disable-libquadmath-support",
 		"--disable-libsanitizer",
 		"--disable-libssp",
-		"--disable-libstdcxx"
+		"--disable-libstdcxx",
 		"--disable-libvtv",
 		"--disable-lto",
-		"--disable-multilib",
+		"--disable-multilib"
 	    ],
             "sources": [
                 {
