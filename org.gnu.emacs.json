@@ -69,7 +69,27 @@
 	{
             "name": "libgccjit",
 	    "buildsystem": "autotools",
-	    "config-opts": ["--enable-host-shared", "--disable-multilib", "--enable-languages=jit", "--disable-bootstrap", "--enable-checking=release"],
+	    "config-opts": [
+		"--with-linker-hash-style=gnu",
+		"--enable-checking=release",
+		"--enable-checking=release",
+		"--enable-host-shared",
+		"--enable-languages=jit",
+		"--enable-linker-build-id",
+		"--enable-shared",
+		"--disable-bootstrap",
+		"--disable-libada",
+		"--disable-libgomp",
+		"--disable-liboffloadmic",
+		"--disable-libquadmath",
+		"--disable-libquadmath-support",
+		"--disable-libsanitizer",
+		"--disable-libssp",
+		"--disable-libstdcxx"
+		"--disable-libvtv",
+		"--disable-lto",
+		"--disable-multilib",
+	    ],
             "sources": [
                 {
                     "type": "git",
@@ -81,7 +101,11 @@
             "name": "emacs",
             "buildsystem": "autotools",
             "config-opts": [
-                "--with-gnutls", "--with-nativecomp", "--with-modules", "--with-jansson", "--without-x"
+                "--with-gnutls",
+		"--with-nativecomp",
+		"--with-modules",
+		"--with-jansson",
+		"--without-x"
             ],
             "sources": [
                 {
