@@ -1,0 +1,13 @@
+diff --git a/etc/emacs.appdata.xml b/etc/emacs.appdata.xml
+index 1b5d7f9aae..cc61404282 100644
+--- a/etc/emacs.appdata.xml
++++ b/etc/emacs.appdata.xml
+@@ -1,7 +1,7 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <!-- Copyright (C) 2014-2020 Free Software Foundation, Inc. -->
+ <component type="desktop-application">
+- <id>org.gnu.emacs</id>
++ <id>org.rh.emacs-native</id>
+  <metadata_license>GFDL-1.3+</metadata_license>
+  <project_license>GPL-3.0+ and GFDL-1.3+</project_license>
+  <name>GNU Emacs</name>
