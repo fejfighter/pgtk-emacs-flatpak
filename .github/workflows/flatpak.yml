@@ -25,4 +25,4 @@ jobs:
                 --rm -i bilelmoussaoui/flatpak-github-actions:latest \
                     --manifest-path "org.gnu.emacs.json" \
                     --app-id "org.rh.emacs-native" \
-                    --bundle emacs-native.flatpak"
+                    --bundle "emacs-native.flatpak"
