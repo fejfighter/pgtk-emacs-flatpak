@@ -105,7 +105,7 @@
 		"--with-nativecomp",
 		"--with-modules",
 		"--with-jansson",
-		"--without-x"
+		"--with-pgtk"
             ],
             "sources": [
                 {
