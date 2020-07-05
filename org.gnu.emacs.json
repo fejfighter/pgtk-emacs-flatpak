@@ -76,7 +76,7 @@
 		"--enable-host-shared",
 		"--enable-languages=jit",
 		"--enable-linker-build-id",
-		"--enable-shared",
+		"--enable-static",
 		"--disable-bootstrap",
 		"--disable-libada",
 		"--disable-libgomp",
@@ -89,6 +89,7 @@
 		"--disable-libvtv",
 		"--disable-lto",
 		"--disable-multilib"
+		"--disable-shared"
 	    ],
             "sources": [
                 {
