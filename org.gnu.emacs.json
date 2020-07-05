@@ -72,7 +72,6 @@
 	    "config-opts": [
 		"--with-linker-hash-style=gnu",
 		"--enable-checking=release",
-		"--enable-checking=release",
 		"--enable-host-shared",
 		"--enable-languages=jit",
 		"--enable-linker-build-id",
