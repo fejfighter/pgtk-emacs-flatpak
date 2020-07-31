@@ -22,6 +22,10 @@
 	{
             "name": "jansson",
 	    "buildsystem": "autotools",
+	    "config-opts": [
+		"--enable-static",
+		"--disable-shared"
+	    ],
             "sources": [
                 {
                     "type": "archive",
@@ -33,7 +37,11 @@
 	{
             "name": "mpfr",
 	    "buildsystem": "autotools",
-	    "config-opts": [],
+	    "config-opts": [
+		"--enable-static",
+		"--disable-shared",
+		"CFLAGS=-fPIC"
+	    ],
             "sources": [
                 {
                     "type": "archive",
@@ -45,7 +53,11 @@
 	{
             "name": "mpc",
 	    "buildsystem": "autotools",
-	    "config-opts": [],
+	    "config-opts": [
+		"--enable-static",
+		"--disable-shared",
+		"CFLAGS=-fPIC"
+	    ],
             "sources": [
                 {
 		    "type": "archive",
@@ -57,7 +69,11 @@
 	{
             "name": "gmp",
 	    "buildsystem": "autotools",
-	    "config-opts": [],	
+	    "config-opts": [
+		"--enable-static",
+		"--disable-shared",
+		"CFLAGS=-fPIC"
+	    ],
             "sources": [
                 {
 		    "type": "archive",
