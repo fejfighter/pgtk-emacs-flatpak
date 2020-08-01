@@ -32,7 +32,11 @@
                     "url": "http://www.digip.org/jansson/releases/jansson-2.13.1.tar.gz",
                     "sha512": "e32be6665e41cf1763608c2f1ac4ce0824d4d7ffa5f4a5824cefde279250fdd399d49ba93d8894e16a473731f629b846554654347f027ca9a0a96ed047f10192"
                 }
-            ]
+            ],
+	    "cleanup": [
+		"*"
+	    ]
+
         },
 	{
             "name": "mpfr",
@@ -48,7 +52,10 @@
 		    "url": "https://www.mpfr.org/mpfr-current/mpfr-4.0.2.tar.xz",
                     "sha512": "d583555d08863bf36c89b289ae26bae353d9a31f08ee3894520992d2c26e5683c4c9c193d7ad139632f71c0a476d85ea76182702a98bf08dde7b6f65a54f8b88"
                 }
-            ]
+            ],
+	    "cleanup": [
+		"*"
+	    ]
         },
 	{
             "name": "mpc",
@@ -64,7 +71,11 @@
 		    "url": "https://ftp.gnu.org/gnu/mpc/mpc-1.1.0.tar.gz",
 		    "sha512": "72d657958b07c7812dc9c7cbae093118ce0e454c68a585bfb0e2fa559f1bf7c5f49b93906f580ab3f1073e5b595d23c6494d4d76b765d16dde857a18dd239628"
                 }
-            ]
+            ],
+	    "cleanup": [
+		"*"
+	    ]
+
         },
 	{
             "name": "gmp",
@@ -80,7 +91,11 @@
 		    "url": "https://gmplib.org/download/gmp/gmp-6.2.0.tar.lz",
 		    "sha512": "9975e8766e62a1d48c0b6d7bbdd2fccb5b22243819102ca6c8d91f0edd2d3a1cef21c526d647c2159bb29dd2a7dcbd0d621391b2e4b48662cf63a8e6749561cd"
                 }
-            ]
+            ],
+	    "cleanup": [
+		"*"
+	    ]
+
         },
 	{
             "name": "libgccjit",
@@ -90,9 +105,9 @@
 		"--enable-checking=release",
 		"--enable-host-shared",
 		"--enable-languages=jit",
-		"--enable-linker-build-id",
 		"--enable-static",
 		"--disable-bootstrap",
+		"--disable-gcov",
 		"--disable-libada",
 		"--disable-libgomp",
 		"--disable-liboffloadmic",
@@ -111,7 +126,18 @@
                     "type": "git",
                     "url": "git://gcc.gnu.org/git/gcc.git"
                 }
-            ]
+            ],
+	    "cleanup": [
+		"/bin",
+		"/include",
+		"/lib/gcc",
+		"/lib/debug",
+		"/lib/x86_64-linux-gnu",
+		"/share",
+		"/libexec",
+		"*.a",
+		"*.la"
+	    ]
         },
         {
             "name": "emacs",
@@ -160,6 +186,13 @@
                 "/share/icons/hicolor/scalable/mimetypes/emacs-document23.svg"
             ]
         }
+    ],
+    "cleanup": [
+	"/share/doc",
+	"/include",
+	"/lib/cmake",
+	"/lib/pkgconfig"
     ]
+
 }
  
