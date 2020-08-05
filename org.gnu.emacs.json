@@ -49,8 +49,8 @@
             "sources": [
                 {
                     "type": "archive",
-		    "url": "https://www.mpfr.org/mpfr-current/mpfr-4.0.2.tar.xz",
-                    "sha512": "d583555d08863bf36c89b289ae26bae353d9a31f08ee3894520992d2c26e5683c4c9c193d7ad139632f71c0a476d85ea76182702a98bf08dde7b6f65a54f8b88"
+                    "url": "https://ftp.gnu.org/gnu/mpfr/mpfr-4.1.0.tar.xz",
+                    "sha256": "0c98a3f1732ff6ca4ea690552079da9c597872d30e96ec28414ee23c95558a7f"
                 }
             ],
 	    "cleanup": [
@@ -87,9 +87,9 @@
 	    ],
             "sources": [
                 {
-		    "type": "archive",
-		    "url": "https://gmplib.org/download/gmp/gmp-6.2.0.tar.lz",
-		    "sha512": "9975e8766e62a1d48c0b6d7bbdd2fccb5b22243819102ca6c8d91f0edd2d3a1cef21c526d647c2159bb29dd2a7dcbd0d621391b2e4b48662cf63a8e6749561cd"
+                    "type": "archive",
+                    "url": "https://ftp.gnu.org/gnu/gmp/gmp-6.2.0.tar.xz",
+                    "sha256": "258e6cd51b3fbdfc185c716d55f82c08aff57df0c6fbd143cf6ed561267a1526"
                 }
             ],
 	    "cleanup": [
