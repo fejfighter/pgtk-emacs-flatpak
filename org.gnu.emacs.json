@@ -147,7 +147,8 @@
 		"--with-nativecomp",
 		"--with-modules",
 		"--with-jansson",
-		"--with-pgtk"
+		"--with-pgtk",
+		"--with-zip"
             ],
             "sources": [
                 {
