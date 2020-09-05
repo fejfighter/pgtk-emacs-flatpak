@@ -148,7 +148,8 @@
 		"--with-modules",
 		"--with-jansson",
 		"--with-pgtk",
-		"--with-zip"
+		"--with-zip",
+		"--with-xwidgets"
             ],
             "sources": [
                 {
