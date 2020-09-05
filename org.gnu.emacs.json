@@ -13,8 +13,10 @@
         "--socket=pulseaudio",
 	"--socket=fallback-x11",
         "--socket=wayland",
+	"--socket=ssh-auth",
 	"--talk-name=org.freedesktop.Notifications",
-        "--filesystem=host",
+	"--filesystem=home",
+	"--filesystem=host",
         "--filesystem=/tmp",
         "--filesystem=/var/tmp"
     ],
