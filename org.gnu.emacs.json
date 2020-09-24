@@ -27,7 +27,7 @@
     "modules": [
 	{
             "name": "jansson",
-	    "buildsystem": "autotools",
+	    "buildsystem": "cmake",
             "sources": [
                 {
                     "type": "archive",
