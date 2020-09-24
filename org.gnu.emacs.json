@@ -126,18 +126,15 @@
             "sources": [
                 {
                     "type": "git",
-                    "url": "git://gcc.gnu.org/git/gcc.git"
+                    "url": "git://gcc.gnu.org/git/gcc.git",
+		    "tag": "releases/gcc-10.2.0"
                 }
             ],
 	    "cleanup": [
-		"/bin",
 		"/include",
-		"/lib/gcc",
 		"/lib/debug",
-		"/lib/x86_64-linux-gnu",
 		"/share",
 		"/libexec",
-		"*.a",
 		"*.la"
 	    ]
         },
