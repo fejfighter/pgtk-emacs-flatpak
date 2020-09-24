@@ -1,7 +1,7 @@
 {
     "app-id": "org.rh.emacs-native",
     "runtime" : "org.gnome.Sdk",
-    "runtime-version" : "3.36",
+    "runtime-version" : "3.38",
     "sdk" : "org.gnome.Sdk",
     "command": "emacs",
     "rename-icon": "emacs",
