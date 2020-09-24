@@ -24,20 +24,13 @@
 	{
             "name": "jansson",
 	    "buildsystem": "autotools",
-	    "config-opts": [
-		"--enable-static",
-		"--disable-shared"
-	    ],
             "sources": [
                 {
                     "type": "archive",
                     "url": "http://www.digip.org/jansson/releases/jansson-2.13.1.tar.gz",
                     "sha512": "e32be6665e41cf1763608c2f1ac4ce0824d4d7ffa5f4a5824cefde279250fdd399d49ba93d8894e16a473731f629b846554654347f027ca9a0a96ed047f10192"
                 }
-            ],
-	    "cleanup": [
-		"*"
-	    ]
+            ]
 
         },
 	{
