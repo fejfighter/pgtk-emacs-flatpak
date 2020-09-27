@@ -147,9 +147,9 @@
                 "--with-gnutls",
 		"--with-nativecomp",
 		"--with-modules",
-		"--with-jansson",
+		"--with-json",
 		"--with-pgtk",
-		"--with-zip",
+		"--with-zlib",
 		"--with-xwidgets"
             ],
             "sources": [
