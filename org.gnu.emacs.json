@@ -137,6 +137,12 @@
         {
             "name": "emacs",
             "buildsystem": "autotools",
+	    "build-options" : {
+		"env": {
+		    "CC": "/usr/bin/gcc",
+		    "NATIVE_FULL_AOT": "0"
+		}
+	    },
             "config-opts": [
                 "--with-gnutls",
 		"--with-nativecomp",
