@@ -1,11 +1,66 @@
+From 80f63fcde27ee037a76635df830e0c47366b1b93 Mon Sep 17 00:00:00 2001
+From: Jeff Walsh <fejfighter@gmail.com>
+Date: Tue, 14 Dec 2021 13:26:27 +1100
+Subject: [PATCH 2/3] Desktop-rename
+
+---
+ etc/emacs-mail.desktop       | 3 ++-
+ etc/emacs.desktop            | 2 +-
+ etc/emacsclient-mail.desktop | 2 +-
+ etc/emacsclient.desktop      | 2 +-
+ 4 files changed, 5 insertions(+), 4 deletions(-)
+
+diff --git a/etc/emacs-mail.desktop b/etc/emacs-mail.desktop
+index 3468033584..38adefcf81 100644
+--- a/etc/emacs-mail.desktop
++++ b/etc/emacs-mail.desktop
+@@ -3,8 +3,9 @@ Categories=Network;Email;
+ Comment=GNU Emacs is an extensible, customizable text editor - and more
+ Exec=emacs -f message-mailto %u
+ Icon=emacs
+-Name=Emacs (Mail)
++Name=Emacs (Mail) - PGTK
+ MimeType=x-scheme-handler/mailto;
+ NoDisplay=true
+ Terminal=false
+ Type=Application
++f his spare time raising the profile of cycling in the ACT, as well as establishing and running the Summer Criterium series. Mark’s love for t
+\ No newline at end of file
 diff --git a/etc/emacs.desktop b/etc/emacs.desktop
-index 2e6496e58c..6851406581 100644
+index 0d7cac14da..99063f2cf5 100644
 --- a/etc/emacs.desktop
 +++ b/etc/emacs.desktop
 @@ -1,5 +1,5 @@
  [Desktop Entry]
 -Name=Emacs
-+Name=Emacs - Native Compilation
++Name=Emacs - PGTK
  GenericName=Text Editor
  Comment=Edit text
  MimeType=text/english;text/plain;text/x-makefile;text/x-c++hdr;text/x-c++src;text/x-chdr;text/x-csrc;text/x-java;text/x-moc;text/x-pascal;text/x-tcl;text/x-tex;application/x-shellscript;text/x-c;text/x-c++;
+diff --git a/etc/emacsclient-mail.desktop b/etc/emacsclient-mail.desktop
+index b575a41758..5e96508c5e 100644
+--- a/etc/emacsclient-mail.desktop
++++ b/etc/emacsclient-mail.desktop
+@@ -3,7 +3,7 @@ Categories=Network;Email;
+ Comment=GNU Emacs is an extensible, customizable text editor - and more
+ Exec=sh -c "exec emacsclient --alternate-editor= --display=\\"\\$DISPLAY\\" --eval \\\\(message-mailto\\\\ \\\\\\"%u\\\\\\"\\\\)"
+ Icon=emacs
+-Name=Emacs (Mail, Client)
++Name=Emacs (Mail, Client) - PGTK
+ MimeType=x-scheme-handler/mailto;
+ NoDisplay=true
+ Terminal=false
+diff --git a/etc/emacsclient.desktop b/etc/emacsclient.desktop
+index 1ecdecffaf..76965f0703 100644
+--- a/etc/emacsclient.desktop
++++ b/etc/emacsclient.desktop
+@@ -1,5 +1,5 @@
+ [Desktop Entry]
+-Name=Emacs (Client)
++Name=Emacs (Client) - PGTK
+ GenericName=Text Editor
+ Comment=Edit text
+ MimeType=text/english;text/plain;text/x-makefile;text/x-c++hdr;text/x-c++src;text/x-chdr;text/x-csrc;text/x-java;text/x-moc;text/x-pascal;text/x-tcl;text/x-tex;application/x-shellscript;text/x-c;text/x-c++;
+-- 
+2.33.1
+

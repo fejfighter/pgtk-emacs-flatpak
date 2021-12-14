@@ -1,7 +1,7 @@
 {
-    "app-id": "org.rh.gccemacs",
+    "app-id": "org.gnu.emacs-pgtk",
     "runtime" : "org.gnome.Sdk",
-    "runtime-version" : "3.38",
+    "runtime-version" : "41",
     "sdk" : "org.gnome.Sdk",
     "command": "emacs",
     "rename-icon": "emacs",
@@ -146,22 +146,17 @@
 	    },
             "config-opts": [
                 "--with-gnutls",
-		"--with-nativecomp",
+		"--with-native-compilation",
 		"--with-modules",
 		"--with-json",
 		"--with-pgtk",
-		"--with-zlib",
-		"--with-xwidgets"
+		"--with-zlib"
             ],
             "sources": [
                 {
 		    "type": "git",
-                    "url": "https://github.com/fejfighter/emacs.git",
-		    "branch": "pgtk-nativecomp"
-                },
-                {
-                    "type": "patch",
-                    "path": "appdata-releases.patch"
+                    "url": "https://github.com/emacs-mirror/emacs.git",
+		    "branch": "feature/pgtk"
                 },
                 {
                     "type": "patch",
@@ -169,15 +164,7 @@
                 },
                 {
                     "type": "patch",
-                    "path": "appdata-content-rating.patch"
-                },
-                {
-                    "type": "patch",
-                    "path": "appdata-screenshot-size.patch"
-                },
-                {
-                    "type": "patch",
-                    "path": "appdata-name.patch"
+                    "path": "appdata-id.patch"
                 },
 	        {
                     "type": "patch",
