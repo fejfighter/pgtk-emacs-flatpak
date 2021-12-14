@@ -123,7 +123,8 @@
             "sources": [
                 {
                     "type": "git",
-                    "url": "git://gcc.gnu.org/git/gcc.git"
+                    "url": "git://gcc.gnu.org/git/gcc.git",
+		    "tag": "releases/gcc-11.2.0"
                 }
             ],
 	    "cleanup": [
