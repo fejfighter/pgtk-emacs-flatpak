@@ -155,8 +155,7 @@
             "sources": [
                 {
 		    "type": "git",
-                    "url": "https://github.com/emacs-mirror/emacs.git",
-		    "branch": "feature/pgtk"
+                    "url": "https://github.com/emacs-mirror/emacs.git"
                 },
                 {
                     "type": "patch",
