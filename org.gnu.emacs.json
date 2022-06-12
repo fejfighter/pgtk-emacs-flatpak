@@ -1,7 +1,7 @@
 {
     "app-id": "org.gnu.emacs-pgtk",
     "runtime" : "org.gnome.Sdk",
-    "runtime-version" : "41",
+    "runtime-version" : "42",
     "sdk" : "org.gnome.Sdk",
     "command": "emacs",
     "rename-icon": "emacs",
@@ -31,8 +31,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "http://www.digip.org/jansson/releases/jansson-2.13.1.tar.gz",
-                    "sha512": "e32be6665e41cf1763608c2f1ac4ce0824d4d7ffa5f4a5824cefde279250fdd399d49ba93d8894e16a473731f629b846554654347f027ca9a0a96ed047f10192"
+                    "url": "https://github.com/akheron/jansson/releases/download/v2.14/jansson-2.14.tar.gz",
+                    "sha512": "5a592776c7ba8c0b1f5efaf813f77948bbc4bda168a72d221d176af0cf61038e26c1f30795433be10e2fc5069d5763d11852a8574774906a9f8ad261ac30109c"
                 }
             ]
 
@@ -67,8 +67,8 @@
             "sources": [
                 {
 		    "type": "archive",
-		    "url": "https://ftp.gnu.org/gnu/mpc/mpc-1.1.0.tar.gz",
-		    "sha512": "72d657958b07c7812dc9c7cbae093118ce0e454c68a585bfb0e2fa559f1bf7c5f49b93906f580ab3f1073e5b595d23c6494d4d76b765d16dde857a18dd239628"
+		    "url": "https://ftp.gnu.org/gnu/mpc/mpc-1.2.1.tar.gz",
+		    "sha512": "3279f813ab37f47fdcc800e4ac5f306417d07f539593ca715876e43e04896e1d5bceccfb288ef2908a3f24b760747d0dbd0392a24b9b341bc3e12082e5c836ee"
                 }
             ],
 	    "cleanup": [
@@ -124,7 +124,7 @@
                 {
                     "type": "git",
                     "url": "git://gcc.gnu.org/git/gcc.git",
-		    "tag": "releases/gcc-11.2.0"
+		    "tag": "releases/gcc-12.1.0"
                 }
             ],
 	    "cleanup": [
