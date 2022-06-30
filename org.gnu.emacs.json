@@ -5,7 +5,7 @@
     "sdk" : "org.gnome.Sdk",
     "command": "emacs",
     "rename-icon": "emacs",
-    "rename-appdata-file": "emacs.appdata.xml",
+    "rename-appdata-file": "emacs.metainfo.xml",
     "rename-desktop-file": "emacs.desktop",
     "finish-args": [
         "--share=network",
@@ -14,9 +14,11 @@
 	"--socket=fallback-x11",
         "--socket=wayland",
 	"--socket=ssh-auth",
+	"--socket=session-bus",
 	"--talk-name=org.freedesktop.Notifications",
 	"--filesystem=home",
 	"--filesystem=host",
+	"--filesystem=xdg-config",
         "--filesystem=/tmp",
         "--filesystem=/var/tmp"
     ],
