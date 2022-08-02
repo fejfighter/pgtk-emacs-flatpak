@@ -20,7 +20,8 @@
 	"--filesystem=host",
 	"--filesystem=xdg-config",
         "--filesystem=/tmp",
-        "--filesystem=/var/tmp"
+        "--filesystem=/var/tmp",
+	"--filesystem=xdg-run/gvfs"
     ],
     "build-options" : {
         "cflags": "-O2 -g",
