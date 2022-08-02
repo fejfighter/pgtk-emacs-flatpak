@@ -14,9 +14,7 @@ If you'd prefer traditional =./configure && make && make install= checkout the '
    https://docs.flatpak.org/en/latest/first-build.html
 
 1. =flatpak install org.gnome.sdk= (might also want to install the relevant theme you prefer)
-2. =flatpak-builder --repo=repo --force-clean build-dir org.gnu.emacs.json= - this will take some time
-3. =flatpak --user remote-add --no-gpg-verify emacs-repo repo= 
-4. =flatpak install emacs=
+2. =flatpak-builder --force-clean --user --install  build-dir org.gnu.emacs.json= - this will take some time
 
-Rebuilding is simply repeating steps 2 and running =flatpak update=.
+Rebuilding is simply repeating step 2
 
