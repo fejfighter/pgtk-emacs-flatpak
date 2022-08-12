@@ -179,6 +179,19 @@
                 "/share/icons/hicolor/scalable/mimetypes/emacs-document.svg",
                 "/share/icons/hicolor/scalable/mimetypes/emacs-document23.svg"
             ]
+        },
+        {
+            "name": "podman-wrapper",
+            "buildsystem": "simple",
+            "build-commands": [
+                "install -Dm 755 podman-wrapper /app/bin/podman"
+            ],
+            "sources": [
+                {
+                    "type": "file",
+                    "path": "podman-wrapper"
+                }
+            ]
         }
     ],
     "cleanup": [
