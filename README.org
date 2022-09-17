@@ -7,13 +7,13 @@ This uses the latest releases of of all components, except for gcc, which has ji
 
 This simply glues everything together to in a trackable package rather than installing to =/usr/local/=
 
-If you'd prefer traditional =./configure && make && make install= checkout the 'pgtk-nativecomp' branch here: https://github.com/fejfighter/emacs
+If you'd prefer traditional =./configure && make && make install= all functionality is in the master branch on savannah.
 
 ** Building
    Based off the official documentation:
    https://docs.flatpak.org/en/latest/first-build.html
 
-1. =flatpak install org.gnome.sdk= (might also want to install the relevant theme you prefer)
+1. =flatpak install org.gnome.Sdk= (might also want to install the relevant theme you prefer)
 2. =flatpak-builder --force-clean --user --install  build-dir org.gnu.emacs.json= - this will take some time
 
 Rebuilding is simply repeating step 2
