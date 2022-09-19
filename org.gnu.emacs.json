@@ -32,73 +32,19 @@
 	{
             "name": "jansson",
 	    "buildsystem": "cmake",
+	    "config-opts": [
+		"-DJANSSON_BUILD_DOCS=OFF",
+		"-DJANSSON_EXAMPLES=OFF",
+		"-DCMAKE_BUILD_TYPE=Release",
+		"-DJANSSON_WITHOUT_TESTS=ON"
+	    ],
             "sources": [
                 {
-                    "type": "archive",
-                    "url": "https://github.com/akheron/jansson/releases/download/v2.14/jansson-2.14.tar.gz",
-                    "sha512": "5a592776c7ba8c0b1f5efaf813f77948bbc4bda168a72d221d176af0cf61038e26c1f30795433be10e2fc5069d5763d11852a8574774906a9f8ad261ac30109c"
+		    "type": "git",
+                    "url": "https://github.com/akheron/jansson.git",
+		    "tag": "v2.14"
                 }
             ]
-
-        },
-	{
-            "name": "mpfr",
-	    "buildsystem": "autotools",
-	    "config-opts": [
-		"--enable-static",
-		"--disable-shared",
-		"CFLAGS=-fPIC"
-	    ],
-            "sources": [
-                {
-                    "type": "archive",
-                    "url": "https://ftp.gnu.org/gnu/mpfr/mpfr-4.1.0.tar.xz",
-                    "sha256": "0c98a3f1732ff6ca4ea690552079da9c597872d30e96ec28414ee23c95558a7f"
-                }
-            ],
-	    "cleanup": [
-		"*"
-	    ]
-        },
-	{
-            "name": "mpc",
-	    "buildsystem": "autotools",
-	    "config-opts": [
-		"--enable-static",
-		"--disable-shared",
-		"CFLAGS=-fPIC"
-	    ],
-            "sources": [
-                {
-		    "type": "archive",
-		    "url": "https://ftp.gnu.org/gnu/mpc/mpc-1.2.1.tar.gz",
-		    "sha512": "3279f813ab37f47fdcc800e4ac5f306417d07f539593ca715876e43e04896e1d5bceccfb288ef2908a3f24b760747d0dbd0392a24b9b341bc3e12082e5c836ee"
-                }
-            ],
-	    "cleanup": [
-		"*"
-	    ]
-
-        },
-	{
-            "name": "gmp",
-	    "buildsystem": "autotools",
-	    "config-opts": [
-		"--enable-static",
-		"--disable-shared",
-		"CFLAGS=-fPIC"
-	    ],
-            "sources": [
-                {
-                    "type": "archive",
-                    "url": "https://ftp.gnu.org/gnu/gmp/gmp-6.2.0.tar.xz",
-                    "sha256": "258e6cd51b3fbdfc185c716d55f82c08aff57df0c6fbd143cf6ed561267a1526"
-                }
-            ],
-	    "cleanup": [
-		"*"
-	    ]
-
         },
 	{
             "name": "libgccjit",
@@ -128,7 +74,7 @@
                 {
                     "type": "git",
                     "url": "git://gcc.gnu.org/git/gcc.git",
-		    "tag": "releases/gcc-12.1.0"
+		    "tag": "releases/gcc-12.2.0"
                 }
             ],
 	    "cleanup": [
@@ -137,6 +83,74 @@
 		"/share",
 		"/libexec",
 		"*.la"
+	    ],
+	    "modules": [
+		{
+		    "name": "gmp",
+		    "buildsystem": "autotools",
+		    "config-opts": [
+			"--enable-static",
+			"--disable-shared",
+			"CFLAGS=-fPIC"
+		    ],
+		    "sources": [
+			{
+			    "type": "archive",
+			    "url": "https://ftp.gnu.org/gnu/gmp/gmp-6.2.0.tar.xz",
+			    "sha256": "258e6cd51b3fbdfc185c716d55f82c08aff57df0c6fbd143cf6ed561267a1526"
+			}
+		    ],
+		    "cleanup": [
+			"*"
+		    ]
+		},
+		{
+		    "name": "mpfr",
+		    "buildsystem": "autotools",
+		    "config-opts": [
+			"--enable-static",
+			"--disable-shared",
+			"CFLAGS=-fPIC"
+		    ],
+		    "sources": [
+			{
+			    "type": "git",
+			    "url": "https://gitlab.inria.fr/mpfr/mpfr.git",
+			    "tag": "4.1.0"
+			},
+			{
+			    "type": "patch",
+			    "path": "mpfr-config-warning.patch"
+			}
+		    ],
+		    "cleanup": [
+			"*"
+		    ]
+		},
+		{
+		    "name": "mpc",
+		    "buildsystem": "autotools",
+		    "config-opts": [
+			"--enable-static",
+			"--disable-shared",
+			"CFLAGS=-fPIC"
+		    ],
+		    "sources": [
+			{
+			    "type": "git",
+			    "url": "https://gitlab.inria.fr/mpc/mpc.git",
+			    "tag": "1.2.1"
+			},
+			{
+			    "type": "script",
+			    "commands": [ "autoreconf -fi" ]
+			}
+		    ],
+		    "cleanup": [
+			"*"
+		    ]
+
+		}
 	    ]
         },
         {
@@ -159,7 +173,7 @@
             "sources": [
                 {
 		    "type": "git",
-                    "url": "https://github.com/emacs-mirror/emacs.git"
+                    "url": "git://git.savannah.gnu.org/emacs.git"
                 },
                 {
                     "type": "patch",
