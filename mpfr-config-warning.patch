@@ -1,6 +1,6 @@
-From 351fcce4e3246c7605b372fb9217248a8df987ba Mon Sep 17 00:00:00 2001
+From 23f59757ee255cea6fcda3dcf718de4f44dad30b Mon Sep 17 00:00:00 2001
 From: Jeff Walsh <fejfighter@gmail.com>
-Date: Mon, 19 Sep 2022 10:26:23 +1000
+Date: Wed, 21 Sep 2022 20:07:45 +1000
 Subject: [PATCH] No error on warning
 
 ---
@@ -11,7 +11,7 @@ diff --git a/autogen.sh b/autogen.sh
 index dc68516..52fca3c 100755
 --- a/autogen.sh
 +++ b/autogen.sh
-@@ -24,8 +24,7 @@ for i in $files; do rm -f -- "$i.$$.tmp"; done
+@@ -24,7 +24,7 @@ for i in $files; do rm -f -- "$i.$$.tmp"; done
  trap cleanup $signals
  for i in $files; do mv -f -- "$i" "$i.$$.tmp"; done
  
@@ -20,6 +20,6 @@ index dc68516..52fca3c 100755
  status=$?
  
  rm -rf autom4te.cache
---
-2.37.1
+-- 
+2.37.3
 
