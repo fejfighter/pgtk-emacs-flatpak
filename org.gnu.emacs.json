@@ -25,8 +25,8 @@
 	"--filesystem=xdg-run/gvfs"
     ],
     "build-options" : {
-        "cflags": "-O2 -g",
-        "cxxflags": "-O2 -g"
+        "cflags": "-O2",
+        "cxxflags": "-O2"
     },
     "modules": [
 	{
@@ -44,7 +44,10 @@
                     "url": "https://github.com/akheron/jansson.git",
 		    "tag": "v2.14"
                 }
-            ]
+            ],
+	    "cleanup": [
+		"*"
+	    ]
         },
 	{
             "name": "libgccjit",
@@ -82,7 +85,8 @@
 		"/lib/debug",
 		"/share",
 		"/libexec",
-		"*.la"
+		"*.la",
+		"*.h"
 	    ],
 	    "modules": [
 		{
@@ -159,7 +163,7 @@
 	    "build-options" : {
 		"env": {
 		    "CC": "/usr/bin/gcc",
-		    "NATIVE_FULL_AOT": "0"
+		    "NATIVE_FULL_AOT": "1"
 		}
 	    },
             "config-opts": [
