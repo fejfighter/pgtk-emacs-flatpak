@@ -24,6 +24,9 @@
         "--filesystem=/var/tmp",
 	"--filesystem=xdg-run/gvfs"
     ],
+    "env" : {
+	"INFOPATH": "/app/share/info"
+    },
     "build-options" : {
         "cflags": "-O2",
         "cxxflags": "-O2"
