@@ -1,7 +1,7 @@
 {
     "app-id": "org.gnu.emacs-pgtk",
     "runtime" : "org.gnome.Sdk",
-    "runtime-version" : "42",
+    "runtime-version" : "43",
     "sdk" : "org.gnome.Sdk",
     "command": "emacs",
     "rename-icon": "emacs",
