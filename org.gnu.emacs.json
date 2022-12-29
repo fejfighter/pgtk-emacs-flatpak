@@ -53,6 +53,21 @@
 	    ]
         },
 	{
+	    "name": "treesitter",
+	    "buildsystem": "simple",
+	    "build-commands": [
+		"make PREFIX=$FLATPAK_DEST -j $FLATPAK_BUILDER_N_JOBS",
+		"make install PREFIX=$FLATPAK_DEST -j $FLATPAK_BUILDER_N_JOBS"
+	    ],
+	    "sources": [
+		{
+		    "type": "git",
+                    "url": "https://github.com/tree-sitter/tree-sitter.git",
+		    "tag": "v0.20.7"
+		}
+	    ]
+	},
+	{
             "name": "libgccjit",
 	    "buildsystem": "autotools",
 	    "config-opts": [
@@ -172,6 +187,7 @@
             "config-opts": [
                 "--with-gnutls",
 		"--with-native-compilation",
+		"--with-tree-sitter",
 		"--with-modules",
 		"--with-json",
 		"--with-pgtk",
