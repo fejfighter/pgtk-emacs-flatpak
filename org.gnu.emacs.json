@@ -19,6 +19,7 @@
 	"--talk-name=org.freedesktop.Flatpak",
 	"--filesystem=home",
 	"--filesystem=host",
+	"--filesystem=xdg-config",
 	"--filesystem=xdg-config/emacs:create",
 	"--filesystem=xdg-config/git:ro",
 	"--filesystem=xdg-data/emacs:create",
