@@ -66,7 +66,7 @@
 		{
 		    "type": "git",
                     "url": "https://github.com/tree-sitter/tree-sitter.git",
-		    "tag": "v0.20.7"
+		    "tag": "v0.20.8"
 		}
 	    ]
 	},
@@ -78,7 +78,6 @@
 		"--enable-checking=release",
 		"--enable-host-shared",
 		"--enable-languages=jit",
-		"--enable-static",
 		"--disable-bootstrap",
 		"--disable-gcov",
 		"--disable-libada",
@@ -91,8 +90,7 @@
 		"--disable-libstdcxx",
 		"--disable-libvtv",
 		"--disable-lto",
-		"--disable-multilib",
-		"--disable-shared"
+		"--disable-multilib"
 	    ],
             "sources": [
                 {
@@ -164,7 +162,7 @@
 			{
 			    "type": "git",
 			    "url": "https://gitlab.inria.fr/mpc/mpc.git",
-			    "tag": "1.2.1"
+			    "tag": "1.3.1"
 			},
 			{
 			    "type": "script",
@@ -183,18 +181,17 @@
             "buildsystem": "autotools",
 	    "build-options" : {
 		"env": {
-		    "CC": "/usr/bin/gcc",
-		    "NATIVE_FULL_AOT": "1"
+		    "CC": "/usr/bin/gcc"
 		}
 	    },
             "config-opts": [
                 "--with-gnutls",
-		"--with-native-compilation",
 		"--with-tree-sitter",
 		"--with-modules",
 		"--with-json",
 		"--with-pgtk",
-		"--with-zlib"
+		"--with-zlib",
+		"--with-native-compilation"
             ],
             "sources": [
                 {
@@ -220,19 +217,32 @@
                 "/share/icons/hicolor/scalable/mimetypes/emacs-document23.svg"
             ]
         },
-        {
+		{
             "name": "podman-wrapper",
             "buildsystem": "simple",
             "build-commands": [
-                "install -Dm 755 podman-wrapper /app/bin/podman"
+                "ln -s /app/bin/breakout podman"
             ],
-            "sources": [
-                {
-                    "type": "file",
-                    "path": "podman-wrapper"
-                }
-            ]
-        }
+	    "modules": [
+		{
+		    "name": "breakout",
+		    "buildsystem": "simple",
+		    "build-commands": [
+			"make PREFIX=$FLATPAK_DEST -j $FLATPAK_BUILDER_N_JOBS",
+			"make install PREFIX=$FLATPAK_DEST -j $FLATPAK_BUILDER_N_JOBS",
+			"ln -s $FLATPAK_DEST/bin/breakout $FLATPAK_DEST/bin/toolbox",
+			"ln -s $FLATPAK_DEST/bin/breakout $FLATPAK_DEST/bin/podman"
+		    ],
+		    "sources": [
+			{
+			    "type": "git",
+			    "url": "https://github.com/fejfighter/breakout.git",
+			    "branch": "main"
+			}
+		    ]
+		}
+	    ]
+	}
     ],
     "cleanup": [
 	"/share/doc",
