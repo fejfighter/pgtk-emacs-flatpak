@@ -23,6 +23,7 @@
 	"--filesystem=xdg-config/emacs:create",
 	"--filesystem=xdg-config/git:ro",
 	"--filesystem=xdg-data/emacs:create",
+	"--filesystem=xdg-data/fonts",
         "--filesystem=/tmp",
         "--filesystem=/var/tmp",
 	"--filesystem=xdg-run/gvfs"
