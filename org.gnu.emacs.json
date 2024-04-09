@@ -1,5 +1,5 @@
 {
-    "app-id": "org.gnu.emacs-pgtk",
+    "app-id": "org.gnu.emacs",
     "runtime" : "org.gnome.Sdk",
     "runtime-version" : "45",
     "sdk" : "org.gnome.Sdk",
@@ -36,26 +36,6 @@
         "cxxflags": "-O2"
     },
     "modules": [
-	{
-            "name": "jansson",
-	    "buildsystem": "cmake",
-	    "config-opts": [
-		"-DJANSSON_BUILD_DOCS=OFF",
-		"-DJANSSON_EXAMPLES=OFF",
-		"-DCMAKE_BUILD_TYPE=Release",
-		"-DJANSSON_WITHOUT_TESTS=ON"
-	    ],
-            "sources": [
-                {
-		    "type": "git",
-                    "url": "https://github.com/akheron/jansson.git",
-		    "tag": "v2.14"
-                }
-            ],
-	    "cleanup": [
-		"*"
-	    ]
-        },
 	{
 	    "name": "treesitter",
 	    "buildsystem": "simple",
@@ -189,7 +169,6 @@
                 "--with-gnutls",
 		"--with-tree-sitter",
 		"--with-modules",
-		"--with-json",
 		"--with-pgtk",
 		"--with-zlib",
 		"--with-native-compilation"
@@ -201,15 +180,31 @@
                 },
                 {
                     "type": "patch",
-                    "path": "appdata-launchable.patch"
-                },
-                {
-                    "type": "patch",
                     "path": "appdata-id.patch"
                 },
 	        {
                     "type": "patch",
                     "path": "desktop-rename.patch"
+                },
+                {
+                    "type": "patch",
+                    "path": "metainfo-releases.patch"
+                },
+                {
+                    "type": "patch",
+                    "path": "metainfo-launchable.patch"
+                },
+                {
+                    "type": "patch",
+                    "path": "metainfo-content-rating.patch"
+                },
+                {
+                    "type": "patch",
+                    "path": "metainfo-screenshot-size.patch"
+                },
+                {
+                    "type": "patch",
+                    "path": "metainfo-caption-point.patch"
                 }
             ],
             "cleanup": [
