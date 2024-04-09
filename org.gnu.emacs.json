@@ -97,7 +97,7 @@
                 {
                     "type": "git",
                     "url": "git://gcc.gnu.org/git/gcc.git",
-		    "tag": "releases/gcc-12.2.0"
+                    "tag": "releases/gcc-13.2.0"
                 }
             ],
 	    "cleanup": [
@@ -120,8 +120,8 @@
 		    "sources": [
 			{
 			    "type": "archive",
-			    "url": "https://ftp.gnu.org/gnu/gmp/gmp-6.2.0.tar.xz",
-			    "sha256": "258e6cd51b3fbdfc185c716d55f82c08aff57df0c6fbd143cf6ed561267a1526"
+			    "url": "https://ftp.gnu.org/gnu/gmp/gmp-6.3.0.tar.xz",
+			    "sha256": "a3c2b80201b89e68616f4ad30bc66aee4927c3ce50e33929ca819d5c43538898"
 			}
 		    ],
 		    "cleanup": [
@@ -140,7 +140,7 @@
 			{
 			    "type": "git",
 			    "url": "https://gitlab.inria.fr/mpfr/mpfr.git",
-			    "tag": "4.1.0"
+			    "tag": "4.2.1"
 			},
 			{
 			    "type": "patch",
