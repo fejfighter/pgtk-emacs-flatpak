@@ -1,0 +1,25 @@
+From ce2214e2b2c42c9aea1b56c2594bcf760ebe39f3 Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?Joonas=20Saraj=C3=A4rvi?= <muep@iki.fi>
+Date: Mon, 4 Apr 2022 21:06:03 +0300
+Subject: [PATCH] Fix caption style to avoid a forbidden point
+
+---
+ etc/emacs.metainfo.xml | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/etc/emacs.metainfo.xml b/etc/emacs.metainfo.xml
+index 19c7d5c675..dc235f8c47 100644
+--- a/etc/emacs.metainfo.xml
++++ b/etc/emacs.metainfo.xml
+@@ -41,7 +41,7 @@
+  <screenshots>
+   <screenshot type="default">
+     <image type="source" width="1024" height="576">https://www.gnu.org/software/emacs/images/appdata-26.png</image>
+-    <caption>Editing a Lisp program whilst viewing the Emacs manual.</caption>
++    <caption>Editing a Lisp program whilst viewing the Emacs manual</caption>
+   </screenshot>
+  </screenshots>
+  <update_contact>emacs-devel_AT_gnu.org</update_contact>
+-- 
+2.35.1
+

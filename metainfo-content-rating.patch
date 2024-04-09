@@ -1,0 +1,24 @@
+From f5554c0bfd9f4de71ad0ee92780f3641dea2bea0 Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?Joonas=20Saraj=C3=A4rvi?= <muep@iki.fi>
+Date: Mon, 4 Apr 2022 20:29:03 +0300
+Subject: [PATCH] Add content_rating to metainfo.xml
+
+---
+ etc/emacs.metainfo.xml | 3 +++
+ 1 file changed, 3 insertions(+)
+
+diff --git a/etc/emacs.metainfo.xml b/etc/emacs.metainfo.xml
+index 23d0b2cade..37c5debc7a 100644
+--- a/etc/emacs.metainfo.xml
++++ b/etc/emacs.metainfo.xml
+@@ -53,4 +53,7 @@
+    <release date="2019-04-12" version="26.2"/>
+    <release date="2018-05-28" version="26.1"/>
+  </releases>
++ <content_rating type="oars-1.0">
++   <content_attribute id="social-chat">intense</content_attribute>
++ </content_rating>
+ </component>
+-- 
+2.35.1
+

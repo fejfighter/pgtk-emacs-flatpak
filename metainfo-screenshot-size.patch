@@ -1,0 +1,25 @@
+From d0f388884331b65d0da655ce89a671240210739a Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?Joonas=20Saraj=C3=A4rvi?= <muep@iki.fi>
+Date: Mon, 4 Apr 2022 20:32:11 +0300
+Subject: [PATCH] Fix size attributes of the screenshot
+
+---
+ etc/emacs.metainfo.xml | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/etc/emacs.metainfo.xml b/etc/emacs.metainfo.xml
+index 37c5debc7a..19c7d5c675 100644
+--- a/etc/emacs.metainfo.xml
++++ b/etc/emacs.metainfo.xml
+@@ -40,7 +40,7 @@
+  <developer_name>Free Software Foundation</developer_name>
+  <screenshots>
+   <screenshot type="default">
+-    <image type="source" width="632" height="354">https://www.gnu.org/software/emacs/images/appdata-26.png</image>
++    <image type="source" width="1024" height="576">https://www.gnu.org/software/emacs/images/appdata-26.png</image>
+     <caption>Editing a Lisp program whilst viewing the Emacs manual.</caption>
+   </screenshot>
+  </screenshots>
+-- 
+2.35.1
+
